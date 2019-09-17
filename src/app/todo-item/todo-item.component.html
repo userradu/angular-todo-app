@@ -1,0 +1,17 @@
+<div class="todo-item-wrapper">
+  <input
+    type="checkbox"
+    [id]="todoItem.id"
+    [checked]="todoItem.completed"
+    (change)="onTodoItemStatusChanged($event)"
+  />
+
+  <label [for]="todoItem.id" [ngClass]="{ 'text-strike': todoItem.completed }">
+    {{ todoItem.name }}
+  </label>
+
+  <i
+    class="fas fa-times remove-todo-item"
+    (click)="onRemoveTodoItemClick()"
+  ></i>
+</div>

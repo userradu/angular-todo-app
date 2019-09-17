@@ -1,0 +1,10 @@
+<app-create-todo-item
+  (addTodoItem)="onAddTodoItem($event)"
+></app-create-todo-item>
+
+<app-todo-items-list
+  [todoItems]="todoItems"
+  (changeTodoItemStatus)="onChangeTodoItemStatus($event)"
+  (removeTodoItem)="onRemoveTodoItem($event)"
+>
+</app-todo-items-list>

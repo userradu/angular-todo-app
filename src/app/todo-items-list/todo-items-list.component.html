@@ -1,0 +1,12 @@
+<div class="todo-items-list-wrapper">
+  <ul>
+    <li *ngFor="let todoItem of todoItems">
+      <app-todo-item
+        [todoItem]="todoItem"
+        (changeTodoItemStatus)="onChangeTodoItemStatus($event)"
+        (removeTodoItem)="onRemoveTodoItem($event)"
+      >
+      </app-todo-item>
+    </li>
+  </ul>
+</div>

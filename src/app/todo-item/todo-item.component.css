@@ -1,0 +1,15 @@
+.todo-item-wrapper {
+    margin-bottom: 10px;
+}
+
+.remove-todo-item {
+    float: right;
+}
+
+.remove-todo-item:hover {
+    cursor: pointer;
+}
+
+.text-strike {
+    text-decoration: line-through;
+}
