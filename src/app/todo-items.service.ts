@@ -23,7 +23,7 @@ export class TodoItemsService {
   addTodoItem(name: string) {
     for (const todoItem of this.todoItems) {
       if (todoItem.name === name) {
-        throw new Error(`The name ${name} is already taken!`);
+        throw new Error(`The name ${name} is already taken !`);
       }
     }
 
