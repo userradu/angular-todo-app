@@ -6,10 +6,8 @@ import { TodoItemStatusInfo } from 'src/app/todo-item-status-info.interface';
   selector: 'app-todo-items-list',
   template: ''
 })
-export class TodoItemsListComponentStub {
-
+export class TodoItemsListStubComponent {
   @Input() todoItems: TodoItem[];
   @Output() changeTodoItemStatus = new EventEmitter<TodoItemStatusInfo>();
   @Output() removeTodoItem = new EventEmitter<number>();
-
 }

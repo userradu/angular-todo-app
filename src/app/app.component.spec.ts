@@ -1,7 +1,7 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CreateTodoItemComponentStub } from 'src/testing/create-todo-item-component-stub';
-import { TodoItemsListComponentStub } from 'src/testing/todo-items-list-component-stub';
+import { CreateTodoItemStubComponent } from 'src/testing/create-todo-item-stub.component';
+import { TodoItemsListStubComponent } from 'src/testing/todo-items-list-stub.component';
 import { TodoItemsService } from './todo-items.service';
 import { By } from '@angular/platform-browser';
 import { TodoItemStatusInfo } from './todo-item-status-info.interface';
@@ -21,8 +21,8 @@ describe('AppComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [
-        CreateTodoItemComponentStub,
-        TodoItemsListComponentStub,
+        CreateTodoItemStubComponent,
+        TodoItemsListStubComponent,
         AppComponent
       ],
       providers: [{ provide: TodoItemsService, useValue: todoItemsService }]
@@ -45,7 +45,7 @@ describe('AppComponent', () => {
 
   it('should create a new todo item by using the TodoItemService', () => {
     const createTodoItemDebugElement = fixture.debugElement.query(
-      By.directive(CreateTodoItemComponentStub)
+      By.directive(CreateTodoItemStubComponent)
     );
     createTodoItemDebugElement.componentInstance.addTodoItem.emit(
       'todo item name'

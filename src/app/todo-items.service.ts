@@ -29,7 +29,7 @@ export class TodoItemsService {
 
     this.todoItems.push({
       id: this.currentIndex + 1,
-      name: name,
+      name,
       completed: false
     });
 
