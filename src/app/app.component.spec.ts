@@ -60,7 +60,7 @@ describe('AppComponent', () => {
       completed: false
     };
     const todoItemsListDebugElement = fixture.debugElement.query(
-      By.directive(TodoItemsListComponentStub)
+      By.directive(TodoItemsListStubComponent)
     );
     todoItemsListDebugElement.componentInstance.changeTodoItemStatus.emit(
       todoItemInfo
@@ -73,7 +73,7 @@ describe('AppComponent', () => {
 
   it('should remove a todo item by using the TodoItemService', () => {
     const todoItemsListDebugElement = fixture.debugElement.query(
-      By.directive(TodoItemsListComponentStub)
+      By.directive(TodoItemsListStubComponent)
     );
     todoItemsListDebugElement.componentInstance.removeTodoItem.emit(1);
     expect(todoItemsService.removeTodoItem).toHaveBeenCalledWith(1);
